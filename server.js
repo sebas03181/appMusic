@@ -4,6 +4,16 @@ const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
 
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/tvshows', function(err, res) {
+  if(err) {
+    console.log('ERROR: connecting to Database. ' + err);
+  }
+  
+});
+require("./models/tvshows");
+
 // Get our API routes
 const api = require('./server/routes/api');
 
@@ -19,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 // Set our api routes
 app.use('/api', api);
 app.use('/ejemplo', api);
+app.use('/tvshows', api);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {

@@ -1,0 +1,19 @@
+<h2>Nueva Lista</h2>
+  <form>
+    
+      <label for="validationDefault01">Nombre</label>
+      <input type="text" class="form-control" id="nombre" [(ngModel)]="list.title" name="nombre" placeholder="Nombre" required>
+    
+    
+      <label for="categoria">Categoria</label>
+      <select class="custom-select d-block my-3" name="categoria" [(ngModel)]="list.categoria" required>
+        <option value="Salsa">Salsa</option>
+        <option value="Rock">Rock</option>
+        <option value="Electro">Electro</option>
+      </select>
+  
+    <label for="summary">Descripcion</label>
+      <input type="text" class="form-control" id="validationDefault02" name="descripcion" [(ngModel)]="list.summary" placeholder="Descripcion de la lista" required>
+  
+  <button class="btn btn-primary" (click)="guardar(list)" type="submit">Guardar</button>
+</form>

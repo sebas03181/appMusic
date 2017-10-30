@@ -27,4 +27,20 @@ router.get('/ejemplo', (req, res) => {
   res.send('api ejemplo');
 });
 
+var TVShowCtrl = require('./../../controllers/tvshows');
+
+// API routes
+//var tvshows = express.Router();
+
+router.route('/tvshows')
+  .get(TVShowCtrl.findAllTVShows)
+  .post(TVShowCtrl.addTVShow);
+
+router.route('/tvshows/:id')
+  .get(TVShowCtrl.findById)
+  .put(TVShowCtrl.updateTVShow)
+  .delete(TVShowCtrl.deleteTVShow);
+
+//app.use('/api', tvshows);
+
 module.exports = router;

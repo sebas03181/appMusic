@@ -6,8 +6,10 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
+import { ListsComponent } from './lists/lists.component';
 // Imports commented out for brevity
 import { RouterModule } from '@angular/router';
+import { NewListaComponent } from './new-lista/new-lista.component';
 
 
 
@@ -15,19 +17,20 @@ import { RouterModule } from '@angular/router';
 const ROUTES = [
   {
     path: '',
-    redirectTo: 'list',
+    redirectTo: 'lists',
     pathMatch: 'full'
   },
-  {
-    path: 'list',
-    component: ListComponent
-  }
+  { path: 'lists', component: ListsComponent },
+  { path: 'list/:id', component: ListComponent },
+  { path: 'new', component: NewListaComponent },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent
+    ListComponent,
+    ListsComponent,
+    NewListaComponent
   ],
   imports: [
     BrowserModule,

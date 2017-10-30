@@ -1,10 +1,12 @@
-<div class="container">
-  <div class="row" *ngFor="let post of posts">
-    <div class="card card-block">
-      <h4 class="card-title">{{ post.title }}</h4>
-      <p class="card-text">{{post.body}}</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
+<div *ngIf="list">
+  <h2>Lista </h2>
+  <div>
+    <label>Nombre: </label>{{list.title}}
   </div>
-</div>
+  <div>
+    <label>Categoria: </label>{{list.genre}}
+  </div>
+  <div>
+    <label>Descripcion: </label>{{list.summary}}
+  </div>
+<div>
