@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostsService } from '../posts.service';
 import 'rxjs/add/operator/switchMap';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Params } from '@angular/router';
 import { Location }                 from '@angular/common';
 import { Lista } from '../../../models/frontend/lista';
 
@@ -18,15 +18,14 @@ export class ListComponent implements OnInit {
   private location: Location) { }
 
   ngOnInit() {
+    let id: string = '';
+    this.route.params.forEach((param: Params) => {
+      id = param['id'];
+    });
 
    this.route.paramMap
-    .switchMap((params: ParamMap) => this.postsService.getAPosts('59f4e89f7d12511ab4659e79'))
-    .subscribe(list => {this.list = list
-
-      // var audio = new Audio();
-      // audio.src = "./music/Cosculluela - La Boda.mp3";
-      // audio.load();
-      // audio.play();
+    .switchMap((params: ParamMap) => this.postsService.getAPosts(id))
+    .subscribe(list => {this.list = list;
     });
   }
 

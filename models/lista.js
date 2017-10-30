@@ -2,6 +2,7 @@ var mongoose = require('mongoose'),
     Schema   = mongoose.Schema;
 
 var tvshowSchema = new Schema({
+  id:       { type: String },
   title:    { type: String },
   year:     { type: Number },
   country:  { type: String },
@@ -13,4 +14,4 @@ var tvshowSchema = new Schema({
   summary:  { type: String }
 });
 
-module.exports = mongoose.model('TVShow', tvshowSchema);
+module.exports = mongoose.model('Lista', tvshowSchema);

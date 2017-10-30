@@ -26,6 +26,15 @@ export class ListsComponent implements OnInit {
   newLista(){
      this.router.navigate(['/new']);
   }
+  navigate(lista){
+    this.router.navigateByUrl(`list/${lista._id}`);
+  }
+  eliminar(lista){
+    this.postsService.deleteApost (lista._id).then(result => {
+      console.log(result);
+      window.location.reload();
+    });
+  }
 
 
 }

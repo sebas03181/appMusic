@@ -10,13 +10,21 @@ export class PostsService {
 
   // Get all posts from the API
   getAllPosts() {
-    return this.http.get('/api/tvshows')
+    return this.http.get('/api/listas')
       .map(res => res.json());
   }
 
   getAPosts(id) {
-    return this.http.get(`/api/tvshows/${id}`)
+    return this.http.get(`/api/listas/${id}`)
       .map(res => res.json());
+  }
+
+  deleteApost(id) {
+    return this.http
+    .delete(`/api/listas/${id}`)
+    .toPromise()
+    .then(res => res)
+    .catch(this.handleError);
   }
 
   create(lista: Lista): Promise<Lista> {
@@ -31,7 +39,7 @@ export class PostsService {
       "summary": lista.summary
     }
     return this.http
-      .post('/api/tvshows/', JSON.stringify(lista), { headers: this.headers })
+      .post('/api/listas/', JSON.stringify(lista), { headers: this.headers })
       .toPromise()
       .then(res => res.json().data)
       .catch(this.handleError);

@@ -6,8 +6,8 @@
     <div class="card card-block">
       <h4 class="card-title">{{ list.title }}</h4>
       <p class="card-text">{{list.summary}}</p>
-      <a href="#" class="card-link">Eliminar</a>
-      <a routerLink="/list/59f4e89f7d12511ab4659e79" class="card-link">Ver Lista</a>
+      <a (click)="eliminar(list)" class="card-link">Eliminar</a>
+      <a (click)="navigate(list)" class="card-link" >Ver Lista</a>
     </div>
   </div>
 </div>
