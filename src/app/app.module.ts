@@ -10,6 +10,8 @@ import { ListsComponent } from './lists/lists.component';
 // Imports commented out for brevity
 import { RouterModule } from '@angular/router';
 import { NewListaComponent } from './new-lista/new-lista.component';
+import { BuscarCancionesComponent } from './buscar-canciones/buscar-canciones.component';
+
 
 
 
@@ -30,9 +32,12 @@ const ROUTES = [
     AppComponent,
     ListComponent,
     ListsComponent,
-    NewListaComponent
+    NewListaComponent,
+    BuscarCancionesComponent,
+    
   ],
   imports: [
+
     BrowserModule,
     FormsModule,
     HttpModule,

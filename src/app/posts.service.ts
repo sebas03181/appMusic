@@ -29,17 +29,27 @@ export class PostsService {
 
   create(lista: Lista): Promise<Lista> {
     let json = {
-      "id": 1,
       "title": lista.title,
-      "year": 2010,
-      "country": "USA",
       "poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTQzNmEwZTMtZGNkNC00YjQ5LThhYzMtZTBhNzUzODI5ZjRjXkEyXkFqcGdeQXVyMjM5NzU3OTM@._V1_SY1000_SX800_AL_.jpg",
-      "seasons": 2,
       "genre": lista.categoria,
-      "summary": lista.summary
+      "summary": lista.summary,
+      "songs": [
+        {
+          "id":0,
+          "nombre":"Crazy",
+          "song":"music/EllaYYo.mp3",
+          "image":"img/Crazy.jpg"
+        },
+        {
+          "id":1,
+          "nombre":"Best Day Of My Life",
+          "song":"music/EllaYYo.mp3",
+          "image":"img/Best Day Of My Life.jpg"
+        }
+      ]
     }
     return this.http
-      .post('/api/listas/', JSON.stringify(lista), { headers: this.headers })
+      .post('/api/listas/', JSON.stringify(json), { headers: this.headers })
       .toPromise()
       .then(res => res.json().data)
       .catch(this.handleError);
