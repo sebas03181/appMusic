@@ -1,3 +1,10 @@
 <p>
   buscar-canciones works!
 </p>
+<select class="selectpicker" >
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
+  <option *ngFor="let cancion of canciones" 
+  [ngValue]="cancion" >{{cancion.nombre}}</option>
+</select>

@@ -1,19 +1,29 @@
 <h2>Nueva Lista</h2>
-  <form>
-    
-      <label for="validationDefault01">Nombre</label>
-      <input type="text" class="form-control" id="nombre" [(ngModel)]="list.title" name="nombre" placeholder="Nombre" required>
-    
-    
-      <label for="categoria">Categoria</label>
-      <select class="custom-select d-block my-3" name="categoria" [(ngModel)]="list.categoria" required>
+<form>
+
+  <label for="validationDefault01">Nombre</label>
+  <input type="text" class="form-control" id="nombre" [(ngModel)]="list.title" name="nombre" placeholder="Nombre" required>
+
+
+  <label for="categoria">Genero</label>
+  <select class="custom-select d-block my-3" name="categoria" [(ngModel)]="list.categoria" required>
         <option value="Salsa">Salsa</option>
         <option value="Rock">Rock</option>
+        <option value="Vallenato">Vallenato</option>
+        <option value="Trap">Trap</option>
+        <option value="Ranchera">Ranchera</option>
+        <option value="Pop">Pop</option>
         <option value="Electro">Electro</option>
       </select>
-  
-    <label for="summary">Descripcion</label>
-      <input type="text" class="form-control" id="validationDefault02" name="descripcion" [(ngModel)]="list.summary" placeholder="Descripcion de la lista" required>
-  
+
+  <label for="summary">Descripcion</label>
+  <input type="text" class="form-control" id="validationDefault02" name="descripcion" [(ngModel)]="list.summary" placeholder="Descripcion de la lista"
+    required>
+  <label>Canciones: </label>
+  <div *ngFor="let cancion of canciones">
+    <label class="form-check-label">
+      <input class="form-check-input" name="firstField" type="checkbox" id="inlineCheckbox1" [(ngModel)]="cancion.valor">{{cancion.nombre}}
+    </label>
+  </div>
   <button class="btn btn-primary" (click)="guardar(list)" type="submit">Guardar</button>
 </form>

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { Select2Module } from 'ng2-select2';
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { ListsComponent } from './lists/lists.component';
@@ -11,6 +11,7 @@ import { ListsComponent } from './lists/lists.component';
 import { RouterModule } from '@angular/router';
 import { NewListaComponent } from './new-lista/new-lista.component';
 import { BuscarCancionesComponent } from './buscar-canciones/buscar-canciones.component';
+import { AlertModule } from 'ngx-bootstrap';
 
 
 
@@ -37,7 +38,8 @@ const ROUTES = [
     
   ],
   imports: [
-
+    AlertModule.forRoot(),
+    Select2Module,
     BrowserModule,
     FormsModule,
     HttpModule,

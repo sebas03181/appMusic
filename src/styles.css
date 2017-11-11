@@ -1,1 +1,326 @@
 /* You can add global styles to this file, and also import other style files */
+/* Master Styles */
+@font-face {
+	font-family: 'Helvetica Neue LT Std';
+	src: url('assets/fonts/HelveticaNeueLTStd-Lt.eot');
+	src: url('assets/fonts/HelveticaNeueLTStd-Lt.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/HelveticaNeueLTStd-Lt.woff') format('woff'),
+		url('assets/fonts/HelveticaNeueLTStd-Lt.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue LT Std';
+	src: url('assets/fonts/HelveticaNeueLTStd-Th.eot');
+	src: url('assets/fonts/HelveticaNeueLTStd-Th.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/HelveticaNeueLTStd-Th.woff') format('woff'),
+		url('assets/fonts/HelveticaNeueLTStd-Th.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue LT Std';
+	src: url('assets/fonts/HelveticaNeueLTStd-Md.eot');
+	src: url('assets/fonts/HelveticaNeueLTStd-Md.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/HelveticaNeueLTStd-Md.woff') format('woff'),
+		url('assets/fonts/HelveticaNeueLTStd-Md.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue LT Std';
+	src: url('assets/fonts/HelveticaNeueLTStd-Bd.eot');
+	src: url('assets/fonts/HelveticaNeueLTStd-Bd.eot?#iefix') format('embedded-opentype'),
+		url('assets/fonts/HelveticaNeueLTStd-Bd.woff') format('woff'),
+		url('assets/fonts/HelveticaNeueLTStd-Bd.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+  margin: 2em;
+  background-color: #F7F7F7;
+  font-family: 'Helvetica Neue LT Std';
+  padding-bottom: 60px;
+}
+body, input[text], button {
+  color: #888;
+}
+
+/* . . . */
+/* everywhere else */
+/** {
+  font-family: 'Helvetica Neue LT Std', Times, serif;
+}*/
+
+/*Modal component*/
+.container{
+    margin:auto!important;
+    width: 95%;
+}
+
+@media screen and (max-width: 800px) {
+	.container{
+		width: 100%!important;
+	}
+}
+
+.custom-modal-header{
+	border: 0px none!important;
+	padding: 0px!important;
+}
+
+.custom-modal-header span{
+	margin: 10px;
+	line-height: 35px;
+}
+
+.custom-modal-footer{
+	border: 0px none!important;
+	padding: 10px!important;
+	text-align: right;
+	min-height: 53px;
+}
+
+.btn-ok{
+	background-color: #f18f20!important;
+	border-color: #f18f20!important;
+	color: white!important;
+}
+
+
+.btn-ok:hover {
+   background-color: #f6b68b!important;
+   border-color: #f6b68b!important;
+   color: #fff!important;
+}
+
+.btn-cancel{
+	background:none!important;
+	margin: 6px!important;
+	padding:0!important;
+	border:none; 
+	font: inherit;
+	
+	cursor: pointer;
+	color: #1e75bc;
+    
+    text-decoration: none; 
+}
+
+.btn-cancel:hover, .btn-cancel:focus, .btn-cancel.focus {
+    text-decoration: underline;
+    color: #08a4dd;
+    cursor: pointer;
+}
+
+.btn-link-style {
+    font-size: 18px;
+    font-weight: 400px;
+    color: #494949;
+    text-decoration: none;  
+	cursor: pointer;      
+}
+
+
+.modal-sm {
+  width: 400px!important;
+}
+
+@media screen and (max-width: 480px) {
+  .modal-sm {
+   width: 300px!important;
+  }
+  .small{
+	margin-left: 10px;
+    width: 210px;
+
+  }
+}
+
+.alert-title{
+	height: 40px;
+	max-width: 398px;
+	color:white;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+ }
+
+.alert-warning{
+	background-color: #febe10;
+	border: 1px solid #febe10;
+ }
+
+ .alert-error{
+	background-color: #af1f23;
+	border: 1px solid #af1f23;
+ }
+
+ .alert-success{
+	background-color: #86c140;
+	border: 1px solid #86c140;
+ }
+
+ .alert-info{
+	background-color: #005284;
+	border: 1px solid #005284;
+ }
+
+ .dialog-content{
+	 font:100;
+	 font-size: 15px;
+	 color: #000000;
+ }
+
+ table {
+    background-color:transparent;
+	font-size: 14px;
+	font-weight: Light;
+	text-align: center;
+}
+
+table thead {
+    background-color: #686868;
+    color: #FFF;    
+}
+
+table th {
+	text-align: center;
+}
+
+table tbody {
+	color: #818181;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+	font-weight: 300;
+  	border-top-width:0px;
+  	border-bottom-width:0px;
+	vertical-align: middle;
+}
+
+.numero-registros{
+	font-weight: bold;
+}
+
+.registros-paginacion{
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 79px;
+}
+
+.panel-form {
+    background: #FFFFFF;
+    padding: 20px 15px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+	-moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+}
+
+h1 {
+	color: #494949;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+h2 {
+	color: #f7941d;
+	font-size: 18px;
+	font-weight: 300;
+	border-bottom: 1px solid #DDD;
+	padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+
+.btn{
+	border-radius: 0px!important;
+}
+
+.message-centered{
+	align-content: center;
+	text-align: center;
+}
+.message{
+    width: auto;
+	margin:0 auto;
+    padding: 5px 10px;
+	text-align: center;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	-moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.message-login{
+	margin:auto!important;
+    padding: 5px 10px;
+	text-align: left!important;
+}
+.message-login img{
+	width: 30px;
+	padding-right: 5px;
+	
+}
+
+.message img{
+	width: 30px;
+	padding-right: 5px;
+}
+
+.message-info{
+	display:inline-block;
+	background: #E1F1F9;
+	color:  #818181;
+	
+}
+
+.message-error{
+	background: #FDD4D4;
+	color:  #818181;
+}
+.message-error-cie10{
+	display:inline-block;
+	background: #FDD4D4;
+	color:  #818181;
+}
+
+.actions-right{
+	text-align: right;
+}
+
+.modal {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) { 
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.form-control-div{
+	 word-wrap: break-word;
+}

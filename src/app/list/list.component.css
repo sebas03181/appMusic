@@ -1,0 +1,25 @@
+.img-edit{
+    padding-right: 15px;
+   
+}
+.center-img {
+    padding-left: 2px;
+    margin-top: 7px;
+    text-align: right;
+    width: 18px;
+    margin-right: 2%;
+}
+
+.pad-icon{
+    padding-right: 10px;
+}
+@media screen and (max-width: 340px) {
+  .img-edit{
+        text-align: right!important;
+        padding-left: 0px;
+        padding-right: 0px;
+        word-spacing: -1.5px;
+    }
+    
+}
+

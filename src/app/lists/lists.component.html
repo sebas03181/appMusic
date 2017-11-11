@@ -1,13 +1,13 @@
-
-<h2>{{title}}</h2>
-<button (click)="newLista()">Nueva</button>
+<h2>
+  {{title}}</h2>
+<button type="submit" class="btn btn-primary" (click)="newLista()">Nueva Lista</button>
 <div class="container">
   <div class="row" *ngFor="let list of lists">
     <div class="card card-block">
       <h4 class="card-title">{{ list.title }}</h4>
       <p class="card-text">{{list.summary}}</p>
-      <a (click)="eliminar(list)" class="card-link">Eliminar</a>
-      <a (click)="navigate(list)" class="card-link" >Ver Lista</a>
+      <a (click)="eliminar(list)" class="btn-link-style img-edit">Eliminar</a>
+      <a (click)="navigate(list)" class="btn-link-style">Ver Lista</a>
     </div>
   </div>
 </div>

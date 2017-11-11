@@ -34,7 +34,8 @@ exports.addLista = function(req, res) {
 		poster:   req.body.poster,
 		seasons:  req.body.seasons,
 		genre:    req.body.genre,
-		summary:  req.body.summary
+		summary:  req.body.summary,
+		songs:  req.body.songs
 	});
 
 	listas.save(function(err, listas) {
